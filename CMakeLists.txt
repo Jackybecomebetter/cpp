@@ -6,3 +6,4 @@ SET(CMAKE_CXX_FLAGS "-std=c++11")
 
 ADD_SUBDIRECTORY(operator_overloading)
 ADD_SUBDIRECTORY(template)
+ADD_SUBDIRECTORY(param_passing)

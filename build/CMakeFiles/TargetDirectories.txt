@@ -18,3 +18,10 @@
 /home/jack/workspace/c++/build/template/CMakeFiles/rebuild_cache.dir
 /home/jack/workspace/c++/build/template/CMakeFiles/edit_cache.dir
 /home/jack/workspace/c++/build/template/CMakeFiles/template.dir
+/home/jack/workspace/c++/build/param_passing/CMakeFiles/install.dir
+/home/jack/workspace/c++/build/param_passing/CMakeFiles/list_install_components.dir
+/home/jack/workspace/c++/build/param_passing/CMakeFiles/rebuild_cache.dir
+/home/jack/workspace/c++/build/param_passing/CMakeFiles/edit_cache.dir
+/home/jack/workspace/c++/build/param_passing/CMakeFiles/install/strip.dir
+/home/jack/workspace/c++/build/param_passing/CMakeFiles/install/local.dir
+/home/jack/workspace/c++/build/param_passing/CMakeFiles/param_passing.dir

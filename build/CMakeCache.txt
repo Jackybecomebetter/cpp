@@ -213,6 +213,12 @@ operator_overloading_BINARY_DIR:STATIC=/home/jack/workspace/c++/build/operator_o
 operator_overloading_SOURCE_DIR:STATIC=/home/jack/workspace/c++/operator_overloading
 
 //Value Computed by CMake
+param_passing_BINARY_DIR:STATIC=/home/jack/workspace/c++/build/param_passing
+
+//Value Computed by CMake
+param_passing_SOURCE_DIR:STATIC=/home/jack/workspace/c++/param_passing
+
+//Value Computed by CMake
 template_BINARY_DIR:STATIC=/home/jack/workspace/c++/build/template
 
 //Value Computed by CMake
@@ -319,7 +325,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

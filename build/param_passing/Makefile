@@ -56,30 +56,6 @@ CMAKE_BINARY_DIR = /home/jack/workspace/c++/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -124,16 +100,40 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/lib/python3.5/dist-packages/cmake/data/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jack/workspace/c++/build/CMakeFiles /home/jack/workspace/c++/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/jack/workspace/c++/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/jack/workspace/c++/build/CMakeFiles /home/jack/workspace/c++/build/param_passing/CMakeFiles/progress.marks
+	cd /home/jack/workspace/c++/build && $(MAKE) -f CMakeFiles/Makefile2 param_passing/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jack/workspace/c++/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/jack/workspace/c++/build && $(MAKE) -f CMakeFiles/Makefile2 param_passing/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,57 +143,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/jack/workspace/c++/build && $(MAKE) -f CMakeFiles/Makefile2 param_passing/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/jack/workspace/c++/build && $(MAKE) -f CMakeFiles/Makefile2 param_passing/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/jack/workspace/c++/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named operator_overloading
+# Convenience name for target.
+param_passing/CMakeFiles/param_passing.dir/rule:
+	cd /home/jack/workspace/c++/build && $(MAKE) -f CMakeFiles/Makefile2 param_passing/CMakeFiles/param_passing.dir/rule
+.PHONY : param_passing/CMakeFiles/param_passing.dir/rule
 
-# Build rule for target.
-operator_overloading: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 operator_overloading
-.PHONY : operator_overloading
+# Convenience name for target.
+param_passing: param_passing/CMakeFiles/param_passing.dir/rule
 
-# fast build rule for target.
-operator_overloading/fast:
-	$(MAKE) -f operator_overloading/CMakeFiles/operator_overloading.dir/build.make operator_overloading/CMakeFiles/operator_overloading.dir/build
-.PHONY : operator_overloading/fast
-
-#=============================================================================
-# Target rules for targets named template
-
-# Build rule for target.
-template: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 template
-.PHONY : template
-
-# fast build rule for target.
-template/fast:
-	$(MAKE) -f template/CMakeFiles/template.dir/build.make template/CMakeFiles/template.dir/build
-.PHONY : template/fast
-
-#=============================================================================
-# Target rules for targets named param_passing
-
-# Build rule for target.
-param_passing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 param_passing
 .PHONY : param_passing
 
 # fast build rule for target.
 param_passing/fast:
-	$(MAKE) -f param_passing/CMakeFiles/param_passing.dir/build.make param_passing/CMakeFiles/param_passing.dir/build
+	cd /home/jack/workspace/c++/build && $(MAKE) -f param_passing/CMakeFiles/param_passing.dir/build.make param_passing/CMakeFiles/param_passing.dir/build
 .PHONY : param_passing/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	cd /home/jack/workspace/c++/build && $(MAKE) -f param_passing/CMakeFiles/param_passing.dir/build.make param_passing/CMakeFiles/param_passing.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	cd /home/jack/workspace/c++/build && $(MAKE) -f param_passing/CMakeFiles/param_passing.dir/build.make param_passing/CMakeFiles/param_passing.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	cd /home/jack/workspace/c++/build && $(MAKE) -f param_passing/CMakeFiles/param_passing.dir/build.make param_passing/CMakeFiles/param_passing.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -201,15 +204,16 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... operator_overloading"
-	@echo "... template"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... param_passing"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
@@ -221,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/jack/workspace/c++/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
